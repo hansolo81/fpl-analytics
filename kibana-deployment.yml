@@ -1,22 +1,22 @@
 apiVersion: latest 
 kind: Deployment
 metadata:
-  name: elasticsearch-deployment
+  name: kibana-deployment
   labels:
-    app: elasticsearch
+    app: kibana
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: elasticsearch
+      app: kibana
   template:
     metadata:
       labels:
-        app: elasticsearch
+        app: kibana
     spec:
       containers:
-      - name: elasticsearch
-        image: zakiyunus/elasticsearch:latest
+      - name: kibana
+        image: zakiyunus/kibana:latest
         ports:
         - containerPort: 9200
 
